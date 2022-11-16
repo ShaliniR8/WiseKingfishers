@@ -27,14 +27,14 @@ create temp table trr_side as
 -- number of trrs by year and side;
 drop table if exists trr_count_by_year_side;
 create temp table trr_count_by_year_side as
-    select beat, side, years, count(*) from trr_side group by (beat, side, years);
+    select side, years, count(*) from trr_side group by (side, years);
 select * from trr_count_by_year_side;
 
--- number of trrs by year
-drop table if exists trr_count_by_year;
-create temp table trr_count_by_year as
-    select array_agg(distinct beat), years, count(years) from trr_side group by (years);
-select * from trr_count_by_year;
+-- number of trrs by year and beats
+drop table if exists trr_count_by_year_beats;
+create temp table trr_count_by_year_beats as
+    select array_agg(distinct beat) as beats_involved, years, count(years) from trr_side group by (years);
+select * from trr_count_by_year_beats;
 
 
 
