@@ -1,6 +1,11 @@
-,model,best hparams,best score
-0,LinearRegression(),{'lreg__positive': False},0.28358040933802797
-1,Ridge(),"{'rreg__alpha': 1, 'rreg__positive': False}",0.2395358245453677
-2,GammaRegressor(),"{'greg__alpha': 0.01, 'greg__warm_start': True}",0.27506295104893674
-3,SGDRegressor(),"{'sgdreg__learning_rate': 'adaptive', 'sgdreg__max_iter': 10000, 'sgdreg__penalty': 'l2'}",0.24076661520635434
-4,KernelRidge(),"{'kreg__alpha': 5e-05, 'kreg__kernel': 'rbf'}",0.7032042975630555
+,model,best hparams,best score,features
+0,LinearRegression(),{'lreg__positive': False},-0.37519029586162556,"beat, side"
+1,LinearRegression(),not set,0.8640486765098274,"beat, side"
+2,Ridge(),"{'rreg__alpha': 1, 'rreg__positive': False}",-0.5450531401164767,"beat, side"
+3,Ridge(),not set,0.8662031569403679,"beat, side"
+4,GammaRegressor(),"{'greg__alpha': 0.01, 'greg__warm_start': True}",-0.46466417235797586,"beat, side"
+5,GammaRegressor(),not set,-0.9582439485563492,"beat, side"
+6,SGDRegressor(),"{'sgdreg__learning_rate': 'adaptive', 'sgdreg__max_iter': 10000, 'sgdreg__penalty': 'elasticnet'}",-0.5410275530757427,"beat, side"
+7,SGDRegressor(),not set,0.8654351598234946,"beat, side"
+8,KernelRidge(),"{'kreg__alpha': 5e-05, 'kreg__kernel': 'rbf'}",0.6042438227922,"beat, side"
+9,KernelRidge(),not set,0.867269131569609,"beat, side"
