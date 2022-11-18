@@ -7,6 +7,8 @@ alter table data_area_beat add column side text;
 update data_area_beat set side='south' where name<1000;
 update data_area_beat set side='north' where name>1000;
 
+select count(beat) from trr_trr group by ;
+
 -- convert trr_datetime to year so that we can compute yearly trr count later
 drop table if exists trr_side_temp;
 create temp table trr_side_temp as
@@ -48,14 +50,4 @@ select * from trr_count_by_year_beats;
 
 
 
--- relevant officer information
 
--- officer history
-
--- officer badge number
-
--- did officer receive award?
-
--- award details
-
--- salary
