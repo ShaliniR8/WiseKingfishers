@@ -1,0 +1,6 @@
+,model,best hparams,best score
+0,LinearRegression(),{'lreg__positive': False},0.28358040933802797
+1,Ridge(),"{'rreg__alpha': 1, 'rreg__positive': False}",0.2395358245453677
+2,GammaRegressor(),"{'greg__alpha': 0.01, 'greg__warm_start': True}",0.27506295104893674
+3,SGDRegressor(),"{'sgdreg__learning_rate': 'adaptive', 'sgdreg__max_iter': 10000, 'sgdreg__penalty': 'l2'}",0.24076661520635434
+4,KernelRidge(),"{'kreg__alpha': 5e-05, 'kreg__kernel': 'rbf'}",0.7032042975630555
