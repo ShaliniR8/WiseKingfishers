@@ -8,31 +8,30 @@ create temp table officer_trr as
         rank,
         active,
         birth_year,
-        first_name,
-        last_name,
-        tags,
-        middle_initial,
-        suffix_name,
-        resignation_date,
         complaint_percentile,
-        middle_initial2,
         civilian_allegation_percentile,
         honorable_mention_percentile,
         internal_allegation_percentile,
-        trr_percentile,
         allegation_count,
         sustained_count,
         civilian_compliment_count,
-        current_badge,
-        current_salary,
         discipline_count,
         honorable_mention_count,
-        last_unit_id,
         major_award_count,
         trr_count,
         unsustained_count,
         beat,
-        extract(year from trr_datetime) as years
+        point(point),
+        extract(year from trr_datetime) as trr_year
     from data_officer inner join trr_trr tt on data_officer.id = tt.officer_id;
 
 select * from officer_trr;
+
+-- select json(point)  from trr_trr
+
+
+
+
+
+
+
